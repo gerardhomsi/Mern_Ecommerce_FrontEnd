@@ -78,7 +78,7 @@ const Cart = () => {
                       <th scope="row">
                         <img
                           style={{ maxWidth: "110px" }}
-                          src={`../uploads/${product.fileName}`}
+                          src={`https://ecommerce-ogdd.onrender.com/uploads/${product.fileName}`}
                           alt="product"
                         />
                       </th>

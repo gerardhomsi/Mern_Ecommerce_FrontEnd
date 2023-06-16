@@ -8,9 +8,10 @@ export const getNewArrivals =
   (sortBy = "desc", limit = 3) =>
   async (dispatch) => {
     try {
+      console.log("process.env.BACKEND_URL :>> ", process.env.BACKEND_URL);
       dispatch({ type: START_LOADING });
       const response = await axios.get(
-        `${process.env.BACKEND_URL}/api/filter?sortBy=${sortBy}&limit=${limit}`
+        `https://ecommerce-ogdd.onrender.com/api/filter?sortBy=${sortBy}&limit=${limit}`
       );
       dispatch({ type: STOP_LOADING });
       dispatch({
@@ -30,7 +31,7 @@ export const getNewArrivals =
 export const getProductsByFilter = (arg) => async (dispatch) => {
   try {
     const response = await axios.post(
-      `${process.env.BACKEND_URL}/api/filter/search`,
+      `https://ecommerce-ogdd.onrender.com/api/filter/search`,
       arg
     );
 

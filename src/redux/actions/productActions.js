@@ -15,7 +15,7 @@ export const createProduct = (formData) => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
     const response = await axios.post(
-      `${process.env.BACKEND_URL}/api/product`,
+      `https://ecommerce-ogdd.onrender.com/api/product`,
       formData
     );
     dispatch({ type: STOP_LOADING });
@@ -40,7 +40,9 @@ export const createProduct = (formData) => async (dispatch) => {
 export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    const response = await axios.get(`${process.env.BACKEND_URL}/api/product`);
+    const response = await axios.get(
+      `https://ecommerce-ogdd.onrender.com/api/product`
+    );
     dispatch({ type: STOP_LOADING });
     dispatch({
       type: GET_PRODUCTS,

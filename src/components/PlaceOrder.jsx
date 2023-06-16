@@ -24,7 +24,7 @@ const PlaceOrder = () => {
     const cartTotal = calculateCartTotal();
 
     const response = await axios.post(
-      `${process.env.BACKEND_URL}/api/payment/payment-intent`,
+      `https://ecommerce-ogdd.onrender.com/api/payment/payment-intent`,
       {
         total: cartTotal,
       }

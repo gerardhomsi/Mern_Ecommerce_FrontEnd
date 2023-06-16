@@ -8,7 +8,7 @@ export const createCategory = async (formData) => {
   };
 
   const response = await axios.post(
-    `${process.env.BACKEND_URL}/category`,
+    `https://ecommerce-ogdd.onrender.com/category`,
     formData,
     config
   );
@@ -17,7 +17,9 @@ export const createCategory = async (formData) => {
 };
 
 export const getCategories = async (formData) => {
-  const response = await axios.get(`${process.env.BACKEND_URL}/api/category`);
+  const response = await axios.get(
+    `https://ecommerce-ogdd.onrender.com/api/category`
+  );
 
   return response;
 };

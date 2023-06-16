@@ -21,7 +21,7 @@ const Card = ({ product, adminPage = false, homePage = false }) => {
         </a>
         <img
           className="w-100 p-0"
-          src={`../uploads/${product.fileName}`}
+          src={`https://ecommerce-ogdd.onrender.com/uploads/${product.fileName}`}
           alt="product"
         />
         <div className="card-body text-center d-flex flex-column">

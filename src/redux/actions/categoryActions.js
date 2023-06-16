@@ -12,7 +12,9 @@ import {
 export const getCategories = () => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    const response = await axios.get(`${process.env.BACKEND_URL}/api/category`);
+    const response = await axios.get(
+      `https://ecommerce-ogdd.onrender.com/api/category`
+    );
     dispatch({ type: STOP_LOADING });
     dispatch({ type: GET_CATEGORIES, payload: response.data.categories });
   } catch (error) {
@@ -33,7 +35,7 @@ export const createCategory = (formData) => async (dispatch) => {
     };
     dispatch({ type: START_LOADING });
     const response = await axios.post(
-      `${process.env.BACKEND_URL}/api/category`,
+      `https://ecommerce-ogdd.onrender.com/api/category`,
       formData,
       config
     );

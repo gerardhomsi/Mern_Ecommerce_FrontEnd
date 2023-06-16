@@ -8,7 +8,7 @@ export const signup = async (data) => {
   };
 
   const response = await axios.post(
-    `${process.env.BACKEND_URL}/api/auth/signup`,
+    `https://ecommerce-ogdd.onrender.com/api/auth/signup`,
     data,
     config
   );
@@ -24,7 +24,7 @@ export const signin = async (data) => {
   };
 
   const response = await axios.post(
-    `${process.env.BACKEND_URL}/api/auth/signin`,
+    `https://ecommerce-ogdd.onrender.com/api/auth/signin`,
     data,
     config
   );

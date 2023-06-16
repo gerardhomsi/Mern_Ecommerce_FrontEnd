@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+.signup-container {
+  background-image: url(../../public/images/signup.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.signin-container {
+  background-image: url(../../public/images/signin.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.custom-red-text:hover {
+  color: red;
+}
+
+.home-page {
+  height: 100vh;
+}
+
+.banner-image {
+  background-image: url(../../public/images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40%;
+}

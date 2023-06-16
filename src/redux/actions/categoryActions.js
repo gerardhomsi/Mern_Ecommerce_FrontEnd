@@ -12,7 +12,7 @@ import {
 export const getCategories = () => async (dispatch) => {
   try {
     dispatch({ type: START_LOADING });
-    const response = await axios.get("/api/category");
+    const response = await axios.get(`${process.env.BACKEND_URL}/api/category`);
     dispatch({ type: STOP_LOADING });
     dispatch({ type: GET_CATEGORIES, payload: response.data.categories });
   } catch (error) {
@@ -32,7 +32,11 @@ export const createCategory = (formData) => async (dispatch) => {
       },
     };
     dispatch({ type: START_LOADING });
-    const response = await axios.post("/api/category", formData, config);
+    const response = await axios.post(
+      `${process.env.BACKEND_URL}/api/category`,
+      formData,
+      config
+    );
     dispatch({ type: STOP_LOADING });
     dispatch({
       type: SHOW_SUCCESS_MESSAGE,
